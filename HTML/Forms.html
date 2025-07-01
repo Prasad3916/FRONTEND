@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--for form we use name for the if there is multiple form tags then we identify the the attribute by the form name by using id-->
+    <!-- Attribute of input tag----name,required,maxlength,min length,value,max,min,step,disabled,size,checked,readonly-->
+    <form action="D:\program creations/table.html"target="_blank" method="post"><!--method attribute for data not showing in the url-->
+       User name:<input type="text"name="user name"  maxlength="15" value="Pambi Bhavani prasad" readonly minlength="3" required><!--name,required,max length,min length,-->
+       email id :<input type="email"name="email" required>
+       Password :<input type="password"  required minlength="8"><!--for text boxes value for the default name-->
+       mobile:<input type="tel" minlength="10" >
+       <br><br>
+       age:<input type="number"minlength="2" max="35" min="18"  size="3"step="5">
+       <br>
+       <input type="submit" value="register">
+       <input type="button" value="button">
+       <input type="reset">
+       <input type="color"><br>
+       Languages known:<br>
+       <input type="checkbox" name="lang" value="telugu">telugu
+       <input type="checkbox" name="lang" value="hindi">hindi
+       <input type="checkbox" name="lang" value="english" checked>english
+       <input type="hidden">
+       <br><br>
+       female:<input type="radio"name="gender" value="female">
+       male  :<input type="radio"name="gender" value="male" checked>
+       <input type="range"> <br>
+       <input type="date">
+       <input type="file">
+       <input type="search"><!--press enter in search box submit action is performed-->
+       <input type="time">
+       <input type="month">
+       <input type="datetime-local">
+       <input type="week">
+       <input type="url"><!--uniform resource locater-->
+       <br><br>
+       <!--text area attributes---cols,rows,name,value-->
+       <textarea cols="15" rows="3" name="address"> 
+        prasad
+       </textarea><br>
+       <select size="2" name="lang" >
+        
+        <option value="telugu">telugu</option>
+        <option value="hindi">hindi</option>
+        <option selected value="english">english</option>
+        <option value="tamil">tamil</option>
+        <option value="kannada ">kannada</option>
+        <option value="malayalam">malayalam</option>
+
+       </select>
+     </form>
+</body>
+</html>

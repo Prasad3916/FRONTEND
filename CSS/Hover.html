@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            align-content: center;
+        }
+        .main{
+            width: 25%;
+            height: 70%;
+            border: 2px solid darkorange;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .image{
+            width: 100%;
+            height: 100%;
+        }
+        .image img{
+            width: 100%;
+            height: 100%;
+             object-fit: cover;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            padding: 2%;
+            top: -100%;
+            left: 0;
+            color: white;
+            opacity: 0.8;
+            font-size: 1.1rem;
+            transition: all 1s;
+            font-family: sans-serif;
+            background-color: rgb(160, 120, 47);
+            
+        }
+        .main:hover .content{
+            /* opacity: 1; */
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="image">
+            <img src="https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg" alt="">
+        </div>
+        <div class="content">
+            
+            Rerum qui corrupti doloribus exercitationem eum rem harum hic dolor ab, deleniti aut quae voluptatem! Expedita labore tenetur eligendi inventore! 
+            Nemo fugit perspiciatis incidunt harum totam perferendis earum. Aliquid maxime odio omnis, adipisci maiores illum iure, enim possimus harum iusto officiis, a dolor recusandae. Exercitationem accusantium impedit doloribus quos odit?
+            Minima excepturi, esse doloribus et officia soluta possimus ut recusandae  totam ipsum ratione eius pariatur ea. Excepturi odio, quo aliquam doloribus, inventore distinctio totam aspernatur maxime hic, possimus sunt ex rerum quis cumque dolores.
+            Doloribus ab, ipsa officia necessitatibus nisi, numquam nobis, fuga velit hic dolore perspiciatis impedit nulla in sapiente. Quidem odit perspiciatis voluptas hic totam neque dolor quaerat officiis similique, ipsa reprehenderit.
+            Dolorum non laborum cum saepe. Esse ad blanditiis consectetur quasi? 
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.container .subcontainer1{
+    margin: 10px;
+}
+.container .subcontainer2{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    align-items: start;
+}
+.container .subcontainer1 .item,
+.container .subcontainer2 .item{
+    padding: 10px;
+}
+.container .subcontainer1 .item{
+    background-color: lightseagreen;
+}
+.container .subcontainer2 .item1{
+    background-color: lightcoral;
+}
+.container .subcontainer2 .item2{
+    background-color: lightgreen;
+}
+.container .subcontainer2 .item3{
+    background-color: lightsalmon;
+}
+.container .subcontainer2 .item4{
+    background-color: lightslategrey;
+}

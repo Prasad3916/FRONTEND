@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            background: rgb(7, 255, 255);  
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            flex-wrap: nowrap;
+            justify-content:center    ;
+            align-content: space-around;
+        }
+        #id1{
+            width: 50px;
+            height: 50px;
+            background: blue;
+            order:2;
+            flex-grow: 5;
+            flex-shrink: 5;
+            align-self: center;
+          
+
+        }
+        #id2{
+            width: 50px;
+            height: 50px;
+            background: brown;
+            order:1;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+
+        }
+        #id3{
+            width: 50px;
+            height: 50px;
+            background: chartreuse;
+            order:3;
+            flex-grow: 1; 
+             flex-shrink: 5;
+
+        }
+        .main
+        {
+            margin-top: 10px;
+            width: 100vw;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+        }
+        .main .item{
+            width: 20%;
+            height: 300px;
+            background-color: rgb(0, 162, 135);
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <div id="id1" class="child">one</div>
+        <div id="id2" class="child">two</div>
+        <div id="id3" class="child">three</div>
+    </div>
+    <div class="main">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        
+      
+    </div>
+</body>
+</html>

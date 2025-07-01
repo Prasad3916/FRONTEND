@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div{
+            margin: 0;
+            width: 450px;
+            height: 250px;
+            position: relative;
+        }
+        div>img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        div>p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 3rem;
+            color: white;
+            background-color: black;
+            padding: 5px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        div:hover p{
+            opacity: 1
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_OWcb9esUYLXKySf_ZHI7PFyAHiKZnhMDeA&s" alt="">
+        <p>Nature</p>
+    </div>
+</body>
+</html>

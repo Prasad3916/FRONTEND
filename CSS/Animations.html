@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            align-content: center;
+            background-color: rgb(137, 150, 146);
+        }
+        .container{
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .container .main{
+            margin: 0 auto;
+            height: fit-content;
+            width: fit-content;
+            display: flex;
+            gap: 20px;
+
+        }
+        .container .main div{
+            height: 150px;
+            width: 40px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+        }
+        .container .main .one{
+            animation-name: one;
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .container .main .two{
+            animation-name: one;
+            animation-duration: 0.7s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .container .main .three{
+            animation-name: one;
+            animation-duration: 0.9s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation-fill-mode: forwards; */
+        }
+        .container .main .four{
+            animation-name: one;
+            animation-duration: 0.7s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .container .main .five{
+            animation-name: one;
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes one {
+            from{
+                transform: scaleY(1.5);
+                background-color: darkorchid;
+                
+            }
+            to{
+                transform: scaleY(1);
+                background-color: darkseagreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family:font;
+            src: url(font.ttf); 
+        }
+        p{
+            font-family: font;
+        }
+        p:hover{
+            color: white;
+            background: black;
+        }
+        a:link{
+            color: rgb(2, 183, 255);
+        }
+        a:visited{
+            color: chartreuse;
+        }
+        a:active{
+            color:pink;
+        }
+
+        p:target{
+            background: yellow;
+            color: blue;
+    
+        }
+        input:focus{
+            background: black;
+        }
+        input:optional{
+            background: skyblue;
+        }
+        input:required{
+            background: blueviolet;
+        }
+        input:read-only{
+            color:white;
+        }
+        input[type="text"]:read-write{
+            color: black;
+        }
+        input:valid{
+            color: rgb(255, 238, 0);
+        }
+        input:invalid{
+            color: red;
+        }
+        input:disabled{
+            background: rgb(47, 0, 255);
+        }
+        input:default+label{
+            background:rgb(0, 255, 0);
+            color: white;
+        }
+        input:in-range{
+            width: 50px;
+        }
+        input:out-of-range{
+            width: 25px;
+        }
+        input:enabled{
+            border-radius: 25px;
+            
+        }
+        input:checked+label{
+            color: red;
+        }
+      
+
+
+    </style>
+</head>
+<body>
+
+    <p>this is paragraph</p>
+    <p>this is paragraph</p>
+    <p>this is paragraph</p>
+    <a href="#last">Last</a>
+    <a  href="D:\program creations\sample website.html">amazon</a>
+    <a  href="D:\program creations\sample website.html">flipkart</a>
+    <p id="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Pariatur labore illo ipsam omnis maxime, deserunt nihil.
+        Excepturi tenetur repudiandae at exercitationem sunt,
+        laudantium commodi aperiam labore adipisci temporibus provident deserunt.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Pariatur labore illo ipsam omnis maxime, deserunt nihil.
+        Excepturi tenetur repudiandae at exercitationem sunt,
+        laudantium commodi aperiam labore adipisci temporibus provident deserunt.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Pariatur labore illo ipsam omnis maxime, deserunt nihil.
+        Excepturi tenetur repudiandae at exercitationem sunt,
+        laudantium commodi aperiam labore adipisci temporibus provident deserunt.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Pariatur labore illo ipsam omnis maxime, deserunt nihil.
+        Excepturi tenetur repudiandae at exercitationem sunt,
+        laudantium commodi aperiam labore adipisci temporibus provident deserunt.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Pariatur labore illo ipsam omnis maxime, deserunt nihil.
+        Excepturi tenetur repudiandae at exercitationem sunt,
+        laudantium commodi aperiam labore adipisci temporibus provident deserunt.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Pariatur labore illo ipsam omnis maxime, deserunt nihil.
+        Excepturi tenetur repudiandae at exercitationem sunt,
+        laudantium commodi aperiam labore adipisci temporibus provident deserunt.
+    </p>
+    <p id="last">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Pariatur labore illo ipsam omnis maxime, deserunt nihil.
+        Excepturi tenetur repudiandae at exercitationem sunt,
+        laudantium commodi aperiam labore adipisci temporibus provident deserunt.
+    </p>
+    <a href="#first">First</a><br><br>
+    FirstName:<input type="text">
+    LastName:<input type="text" readonly>
+    Email:<input type="email" required>
+    Password:<input type="password" required><br><br>
+    surname:<input type="text" disabled>
+    
+    phone:<input type="text">
+    salary:<input type="number" max="50000">
+    noof chilfren:<input type="number" min="2">
+    <h3>languages Known</h3>
+    <input type="checkbox"><label>telugu</label>
+    <input type="checkbox" checked><label>hindi</label>
+    <input type="checkbox"  checked><label>english</label> <!--defualt-->
+    age:<input type="number" min="18" max="35">
+    <br><br>
+    <div>
+        1.<input type="text">
+        2.<input type="text">
+        3.<input type="text">
+    </div>
+
+</body>
+</html>

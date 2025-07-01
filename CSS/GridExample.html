@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 50px 150px 50px;
+            grid-gap: 8px;
+        }
+        .container>div:nth-child(odd){
+            background: greenyellow;
+        }
+        .container>div:nth-child(even){
+            background: rgb(76, 0, 255);
+        }
+        .child1{
+            grid-column: 1/5;
+            text-align: center;
+            align-content: center;
+        }
+        .child3{
+            grid-column: 2/4;
+            text-align: center;
+            align-content: center;
+        }
+        .child5{
+            grid-column: 1/5;
+            text-align: center;
+            align-content: center;
+            
+        }
+        .child2,.child4{
+            text-align: center;
+            align-content: center;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child1">Header</div>
+        <div class="child2">Navbar</div>
+        <div class="child3">Content</div>
+        <div class="child4">Aside</div>
+        <div class="child5">Footer</div>
+    </div>
+    
+</body>
+</html>

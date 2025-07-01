@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: content-box;
+
+        }
+        body{
+            overflow: hidden;
+        }
+        .container{
+            width: 400px;
+            height: 500px;
+            background: rgb(232, 236, 232);
+            padding: 16px;
+            margin:10vh auto;
+            box-shadow: inset -10px -10px 4px  rgb(189, 247, 247),inset 10px 10px 4px lightcyan;
+            text-align: center;
+            
+            border: 4px;
+        }
+        .container h1{
+            margin-top: 30px;
+        }
+        .login input{
+            display: block;
+           margin:13px auto ;  
+           width: auto;
+           height: 20px;
+           box-shadow:  -3px -3px rgb(189, 247, 247);
+           outline: none;
+           border: none;
+           border-radius: 32px;
+           width: 90%;
+           height: 30px;
+           padding: 0 16px;
+
+        }
+        .login input::placeholder{
+            font-size: 15px;
+        }
+        .login button{
+            padding: 2px 7px;
+            cursor: pointer;
+            width: 75%;
+            background: greenyellow;
+            padding: 9px;
+            border-radius: 32px;
+           font-size: 17px;
+            border: none;
+            margin-top: 21px;
+            
+        }
+        .login button:hover{
+            opacity: 70%;
+        }
+        .signup{
+            margin-top: 12px;
+            font-size: 20px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Welcome!!!</h1>
+        <form action="" class="login">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="password">
+            <button>log in</button>
+        </form>
+
+        <div class="signup">
+            <a href="">forgot password</a><br>
+            <span>Don't have an account</span>
+            <a href="" id="signup">sign up</a>
+        </div>
+    </div>
+    
+</body>
+</html>

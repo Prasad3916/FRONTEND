@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 50%;
+            /* border: 2px solid black; */
+            margin: 10px;
+            padding: 10px;
+        }
+        .container>.labels{
+            display: flex;
+        }
+        .container>.labels >label{
+            flex-grow: 1;
+            font-size: 2rem;
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+        .container>.labels >.item1{
+            background-color: lightcoral;
+        }
+        .container>.labels >.item2{
+            background-color: lightseagreen;
+        }
+        .image{
+            width: 100%;
+            background-color: darkblue;
+        }
+        .image img{
+            width: 100%;
+            display: none;
+        }
+        .container #item1:checked~.image .img1,.container #item2:checked~.image .img2,.container #item1:checked~.content .content2,.container #item2:checked~.content .content1{
+            display: block;
+        }
+        .container input{
+            display: none;
+        }
+        .content{
+            /* flex-grow: 1; */
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+        .container .content{
+            display: flex;
+        }
+        .content .content1{
+            display: none;
+            flex-grow: 1;
+            padding: 15px;
+            background-color: lightseagreen;
+        }
+        .content .content2{
+            display: none;
+            flex-grow: 1;
+            padding: 15px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" name="item" id="item1" checked>
+        <input type="radio" name="item" id="item2">
+        <div class="labels">
+            <label for="item1" class="item1">Image - 1</label>
+            <label for="item2" class="item2">Image -2 </label>
+        </div>
+        <div class="image">
+            <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg" alt="" class="img1">
+            <img src="https://images.pexels.com/photos/2049422/pexels-photo-2049422.jpeg" alt="" class="img2">
+        </div>
+        <div class="content">
+            <div class="content1">Click On Image 1 To View</div>
+            <div class="content2">Click On Image 2 To View</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family:font;
+            src: url(font.ttf); 
+        }
+        textarea{
+            width: 100%;
+            text-align: center;
+            color: green;
+            background: rgb(199, 127, 127);
+            font-size: 15px;
+        }
+        textarea:empty{
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .para1 p:not(#paragraph1){
+            font-family: font;
+        }
+        ul li:first-child{
+            color: white;
+            background: black;
+        }
+        ul li:last-child{
+            color: white;
+            background: black;
+        }
+        ul li:nth-child(2){
+            color: green;
+            background: blanchedalmond;
+        }
+        ul li:nth-last-child(2){
+            color: green;
+            background: blanchedalmond;
+        }
+        ol li:nth-last-of-type(2){
+            color: rgb(78, 1, 245);
+            background: beige;
+        }
+        ol li:nth-of-type(2){
+            color: rgb(78, 1, 245);
+            background: beige;
+        }
+        div li:only-child{
+            color: orange;
+        }
+        span li:only-of-type{
+            color: orangered;
+        }
+        .mix li:first-of-type{
+            color: yellow;
+        }
+        .mix1 li:last-of-type{
+            color: green;
+        }
+       
+        
+
+           
+
+   </style>
+</head>
+<body>
+    <div class="textbox">
+        <textarea></textarea>
+        <textarea>this is a textarea tag box</textarea> 
+    </div>
+    <div class="para1">
+        <p id="paragraph1">this is para1</p>
+        <p>this is para2</p>
+        <p>this is para3</p>
+    </div>
+    <ul type="none">
+        <li>apple</li>
+        <li>mango</li>
+        <li>banana</li>
+        <li>grapes</li>
+        <li>pomogranate</li>
+    </ul>
+    <ol>
+        <li>list1</li>
+        <li>list2</li>
+        <p>paragraph1</p>
+        <li>list3</li>
+        <li>list4</li>
+    </ol>
+    <div>
+        <li>this is list</li>
+    </div>
+    <span>
+        <li>this is also list</li>
+        <p>this is paragraph</p>
+        <h3>this is heading</h3>
+    </span>
+    <div class="mix">
+        <li>Mango</li>
+        <li>Mango</li>
+        <li>Mango</li>
+        <p></p>
+    </div>
+    <div class="mix1">
+        <p></p>
+        <li>Apple</li>
+        <li>Apple</li>
+        <li>Apple</li>
+    </div>
+          
+</body>
+</html>

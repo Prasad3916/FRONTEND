@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background: black;
+        text-align: center;
+        color: white;
+        justify-content: center;
+        display: flex;
+        justify-content: space-evenly;
+        
+        
+    }
+    <!--sample selectors--tag based,id based,class-->
+    .container1{
+        color:white;
+
+    }
+    
+    .container2>p{
+    
+        color: aqua;
+        
+
+    }
+    .container3 p{
+        
+        color: dodgerblue;
+
+    }
+    .container4 p+h3{
+        
+        color: red;
+
+    }
+    .container5 p~h3{
+       
+        color: red;
+
+    }
+
+</style>
+<body>
+    <!--simple selectors-tag based,id based,class based-->
+    <!--combinator selectors-child selector(>),descendent selectoe(space),adjacent sibling selector(+),general sibling selector(~)-->
+    <div class="container">
+        <div class="container1">
+            <p>this is paragraph</p>
+            <h3 id="1">this is a heading tag</h3>
+            <div>
+                <p>this is paragraph</p>
+            </div>  
+            <p>this is paragraph</p>
+            <h3>----------------------------</h3>
+        </div>
+        <div class="container2">
+            <p>this is paragraph</p>
+            <h3>this is a heading tag</h3>
+            <div>
+                <p>this is paragraph</p>
+            </div>  
+            <p>this is paragraph</p>
+            <h3>----------------------------</h3>
+        </div>
+        <div class="container3">
+            <p>this is paragraph</p>
+            <h3>this is a heading tag</h3>
+            <div>
+                <p>this is paragraph</p>
+            </div>  
+            <p>this is paragraph</p>
+            <h3>----------------------------</h3>
+        </div>
+        <div class="container4">
+            <p>this is paragraph</p>
+            <h3>this is a heading tag</h3>
+            <div>
+                <p>this is paragraph</p>
+            </div>  
+            <h3>----------------------------</h3>
+            <h3>----------------------------</h3>
+            
+        </div>
+        <div class="container5">
+            <p>this is paragraph</p>
+            <h3>this is a heading tag</h3>
+            <div>
+                <p>this is paragraph</p>
+            </div>  
+            <h3>----------------------------</h3>
+            <h3>----------------------------</h3>
+        </div>
+    </div>
+    
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .items,.items1{
+            display: flex;
+            border:  3px solid darkred;
+            padding: 10px;
+            gap: 10px;
+            /* flex-wrap: wrap; */
+        }
+        .items .item,.items1 .item{
+            width: 300px;
+            padding: 10px;
+            border: 3px solid darkmagenta;
+            font-family: monospace;
+            font-size: 24px;
+            text-align: center;
+        }
+        .item5,.item6{
+            flex-shrink: 0;
+        }
+        .item1,.item10{
+            flex-shrink: 2;
+        }
+        .items1{
+            margin-top: 20px;
+            border: 3px solid darkgreen;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="items">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+        <div class="item item5"></div>
+        <div class="item item6"></div>
+        <div class="item item7"></div>
+        <div class="item item8"></div>
+        <div class="item item9"></div>
+        <div class="item item10"></div>
+    </div>
+    <div class="items1">
+        <div class="item item11">Item1</div>
+        <div class="item item12">Item2</div>
+        <div class="item item13">Item3</div>
+        <div class="item item14">Item4</div>
+        <div class="item item15">Item5</div>
+    </div>
+</body>
+</html>

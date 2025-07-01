@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: absolute;
+            top: 0px;
+            left:0px ;
+            bottom:0px ;
+            right:0px ;
+        }
+
+        
+        .container1{
+            width: 100px;
+            height: 100px;
+            background: orange;
+            transition: 3s;
+
+        }
+        .container2{
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+            transition: 3s;
+        }
+        .container3{
+            width: 100px;
+            height: 100px;
+            background: rgb(255, 18, 18);
+            transition: 3s;
+            
+        }
+        .container4{
+            width: 100px;
+            height: 100px;
+            background: brown;
+            transition: 3s;
+            
+        }
+        .container5{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            transition: 3s;
+            
+        }
+        .container6{
+            width: 100px;
+            height: 100px;
+            background: lightskyblue;
+        
+            transition: 3s 2s;
+            
+        }
+     .container1:hover{
+        transform: translate(20px,30px);
+     }
+
+     .container2:hover{
+        transform:skew(55deg);
+     }
+
+     .container3:hover{
+         transform: scale(3);
+         /* transform: scale3d(3,2,3); */
+     }
+
+     .container4:hover{
+         transform: rotate(45deg);
+          /* transform: rotateX(30deg); */
+          /* transform: rotateY(30deg); */
+          /* transform: rotateZ(30deg); */
+     }
+     .container5:hover{
+            transform: perspective(100px) rotateY(45deg);
+     }
+
+     .container6:hover{
+        transform: perspective(100px) ;
+        /* wait 2 seconds time delay is 2 seconds for this container */
+     }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container1"></div>
+        <div class="container2"></div>
+        <div class="container3"></div>
+        <div class="container4"></div>
+        <div class="container5"></div>
+        <div class="container6"></div>
+    </div>
+
+    
+</body>
+</html>

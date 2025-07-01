@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background: black;
+            color: white;
+        }
+        #first-letter::first-letter{
+            color: blue;
+            font-size: 40px;
+            text-transform: capitalize;
+        }
+        #first-line::first-line{
+            color: chartreuse;
+        }
+        #before::before{
+            content: "before pseudo element ";
+            color: coral;
+        }
+        #after::after{
+            content: "after pseudo element";
+            color: coral;
+        }
+        p::selection{
+            background: black;
+            color: blue;
+
+        }
+        p{
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="first-letter">this is heading tag 2</h2>
+        <h2 id="first-line">this is heading tag 2</h2>
+        <h2 id="before">this is heading tag 2</h2>
+        <h2 id="after">this is heading tag 2</h2>
+    </div>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ut architecto aliquid dicta eius nesciunt dolor ipsa temporibus voluptatibus quo, quas eaque illum corporis sed repellendus, a incidunt ipsum voluptates!</p>
+</body>
+</html>

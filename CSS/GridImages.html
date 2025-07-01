@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 60%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        grid-template-areas:
+        "img1 img1 img2"
+        "img1 img1 img3"
+        "img4 img5 img6";
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border: 2px solid black;
+        }
+        .i1{
+            grid-area: img1;
+        }
+        .i2{
+            grid-area: img2;
+        }
+        .i3{
+            grid-area: img3;
+        }
+        .i4{
+            grid-area: img4;
+        }
+        .i5{
+            grid-area: img5;
+        }
+        .i6{
+            grid-area: img6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="_D4A9838.jpg" alt="" class="i1">
+        <img src="_D4A9838.jpg" alt="" class="i2">
+        <img src="_D4A9838.jpg" alt="" class="i3">
+        <img src="_D4A9838.jpg" alt="" class="i4">
+        <img src="_D4A9838.jpg" alt="" class="i5">
+        <img src="_D4A9838.jpg" alt="" class="i6">
+    </div>
+    
+</body>
+</html>

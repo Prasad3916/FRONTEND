@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            width: 50px;
+            height:50px;
+            display: flex;
+            background: green;
+            transition:width 5s 1s ease ;
+            /* transition: attribute---width ,height
+            tranistion time:3s,3s...,transition deleay--3s,5s,
+            transition timing function---ease,ease-in,ease-in-out,ease-out */
+        }
+        .container2{
+            width: 50px;
+             transform: translate(200px,100px);
+              /* transform: translate(-200px,-100px); for opposite side  */
+            height:50px;
+            display: flex;
+            background: green;
+            transition: 5s 3s;
+        }
+        .container1:hover,.container2:hover{
+            width: 300px;
+            height: 300px;
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container1"></div>
+    <div class="container2"></div>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           @font-face {
+            font-family:font;
+            src: url(font.ttf); 
+        }
+        p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        p[title]{
+            font-size: 20px;
+        }
+        p[title="paragraph"]{
+            color: rgb(0, 255, 0);
+        }
+        p[title~="para"]{
+            background: black;
+            color: white;
+        }
+        p[title|="para"]{
+            font-family: font;     
+        }
+        p[title^=para]::before{
+            content: "start-----";
+            
+        }
+        p[title$="graph"]::after{
+            content: "--------end";
+
+        }
+        p[title*="ara"]::first-letter{
+
+            text-transform: capitalize;
+        }
+        input[type="email"]{
+           
+            border-radius: 25px;
+            border-color: aqua;
+            
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <p title="paragraph">this is paragraph</p>
+    <p title='para-graph'>this is paragraph</title></p>
+    <p title="para graph">this is paragraph</p>
+    <p title="para">this is paragraph</p>
+    <p title="para 1">this is paragraph</p>
+    <p>this is paragraph</p>
+    email:<input type="email">
+    
+</body>
+</html>

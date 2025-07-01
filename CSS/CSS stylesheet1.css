@@ -1,0 +1,139 @@
+.container{
+    width:100%;
+    height:100vh;  
+    background:url(black.jpeg);
+    background-size:cover; 
+    background-position: center;
+}
+.navbar{
+    width: 95%;
+    margin: auto;
+    padding: 20px;
+    display:flex; 
+    justify-content:space-between;
+    
+}
+.navbar a{
+    font-weight: bolder;
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(160, 231, 231);
+    position: relative;
+}
+.navbar ul a{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-weight:normal;
+    font-size:20px;
+    position: relative;
+}
+.navbar ul a::after{
+    content: "";
+    height: 3px;
+    width:0;
+    background: green;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul a:hover::after{
+    width: 100%;
+
+}
+.content{
+    width:100%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    
+}
+.content h1{
+    font-size: 60px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+
+}
+.container .content h1:hover{
+    background-size: auto;
+    
+    color: red;
+   text-decoration: underline;
+   transition: 3s;
+   
+    
+}
+.content p{
+    
+    line-height: 25px;
+}
+.content p:hover{
+    text-decoration: underline;
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(12, 4, 251);
+    
+    border-radius: 25px;
+}
+.content div button{
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    margin:0 15px;
+    border-radius: 25px;
+    border-color: chartreuse;
+    background: transparent;
+    color: rgb(58, 6, 247);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color:rgb(16, 216, 33) ;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: 0.5s;
+}
+.content div button:hover span{
+    width:100%;
+}
+button:hover{
+    border:none;
+}
+
+.footer{
+    text-align: center;
+    text-transform: capitalize; 
+    transition: 0.2s linear;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer .boxcontainer{
+    display: flex;
+    
+}
+.footer .boxcontainer .box{
+    font-size: 30px;
+    color: rgb(55, 7, 249);
+    flex:auto;
+}
+.footer .boxcontainer .box a{
+    text-decoration: none;
+    padding-bottom: 15px;
+    display:block;
+    font-size:large;
+}
+.footer .credit{
+    text-align: center;
+    padding-top: 15px;
+}
+.footer .boxcontainer .box a:hover{
+    text-decoration: underline;
+    color: crimson;
+}

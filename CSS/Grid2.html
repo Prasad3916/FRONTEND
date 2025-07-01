@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            padding: 10px;
+            display: grid;
+            grid-template-columns:repeat(3,300px);
+            grid-template-rows: 200px 200px 200px;
+            /* grid-template-columns:repeat(3,1fr); */
+            /* grid-template-rows: repeat(3,1fr); */
+            gap: 10px;
+            background-color: aqua;
+            /* align-items: center; */
+            /* justify-items: center; */
+            /* place-items: start center;  align-items:start justify-items:center */
+            /* align-items:center justify-items:cenetr*/
+            /* place-items: center;   */
+            align-content: center;
+            justify-content: center;
+            /* place-content: start center;  align-content:start justify-content:center */
+            /* align-content:center justify-content:cenetr*/
+            /* place-content: center;  */
+        }
+        .container{
+            padding: 5% 15%;
+            text-align: center;
+            border: 2px solid darkmagenta;
+        }
+        .container1{
+            align-self: start;
+            justify-self: start;
+        }
+        .container2{
+            align-self: center;
+            justify-self: center;
+        }
+        .container3{
+            align-self: end;
+            justify-self: end;
+        }
+        .container4{
+            align-self: center;
+            justify-self: end;
+        }
+        .container5{
+            align-self: center;
+            justify-self: center;
+        }
+        .container6{
+            align-self: center;
+            justify-self: start;
+        }
+        .container7{
+            align-self: end;
+            justify-self: start;
+        }
+        .container8{
+            align-self: center;
+            justify-self: center;
+        }
+        .container9{
+            align-self: start;
+            justify-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container container1">
+        Hello
+    </div>
+    <div class="container container2">
+        Hello
+    </div>
+    <div class="container container3">
+        Hello
+    </div>
+    <div class="container container4">
+        Hello
+    </div>
+    <div class="container container5">
+        Hello
+    </div>
+    <div class="container container6">
+        Hello
+    </div>
+    <div class="container container7">
+        Hello
+    </div>
+    <div class="container container8">
+        Hello
+    </div>
+    <div class="container container9">
+        Hello
+    </div>
+</body>
+</html>
