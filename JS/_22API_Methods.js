@@ -1,4 +1,4 @@
-// var url ="http://localhost:3000/Employee"
+// var url ="http://localhost:3000/Employee/1"
 // var options={
 //     "method":"DELETE",
 // }

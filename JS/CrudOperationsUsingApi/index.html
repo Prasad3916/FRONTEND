@@ -23,12 +23,18 @@
         .item :last-child::before{
             content: "- ";
         }
+        .close{
+            width: 10% !important;
+        }
+        .itemcontainer{
+            width: 90% !important;
+        }
     </style>
 </head>
 <body class="container w-100 d-flex flex-column align-items-center pt-3">
     <div class="w-50 text-center">
         <input type="text" class="form-control  border border-primary border-2" placeholder="UserName........." id="username" required autocomplete="off"><br>
-        <input type="text" class="form-control  border border-primary border-2 mb-3" placeholder="Share Your Message.........." id="message" required>
+        <input type="text" class="form-control  border border-primary border-2 mb-3" placeholder="Share Your Message.........." id="message" required autocomplete="off">
         <button class="btn btn-success" onclick="addData()">Click Here to Share</button>
     </div>
     <div class="w-50" id="container">
