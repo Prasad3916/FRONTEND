@@ -1,0 +1,49 @@
+   git init   --- initializing git
+git add . or file name   ----- adding git files
+git commit -m "Intial Commit"    ----------commit the files before push
+git status----------------checking status file
+git log  --checking the status getting the commit ids
+git log --oneline ------------getting the ids in one line
+git config --global user.name ""   ---------credentials should be given at the intial
+git config --global user.email ""  ---------credentials should be given at the intial
+git checkout  id   -------------------to go to the previous version of our repository
+git remote add origin(repository name) repository path   --------adding remote to our git
+git push origin(repository name) master(branch)  -----------pushing the files to the git
+git pull --------getting the  updated filed to local repository
+git clone "url"  ---getting any public git repository to the local
+.gitignore   -------write the files to ignore
+readme.md   -----------extra content should be given
+git branch ---------- to check the  branch name of the repository
+git revert id or head
+git revert head(previous commit) -------------> used to undo the previues commit
+git revert head~1 or 2 or 3 ----------->head before commit
+git reset(by default mixed reset) head ------------> get back to the before add 
+git --soft reset head --------------> get back to the before commit
+git --hard reset head --------------> get back to the commit
+
+
+
+creating repository by commands
+echo "# 10KC" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Prasad3916/10KC.git
+git push -u origin main
+
+
+
+push 
+git remote add origin https://github.com/Prasad3916/10KC.git
+git branch -M main
+git push -u origin main
+
+
+
+skdhjsdghsjhbhvani prasadbhanai prasadbhavani prasad
+
+
+
+
+
