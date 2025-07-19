@@ -1,7 +1,7 @@
-var url="https://fakestoreapi.com/products?limit=10"
+var url="https://fakestoreapi.com/products"
 var container=document.createElement("div")
+var loader=document.getElementById("loader")
 container.className="container"
-document.body.append(container)
 fetch(url)
 .then(res=>res.json())
 .then(res=>{
@@ -20,11 +20,13 @@ fetch(url)
         title1.innerHTML=title
         var price1=document.createElement("p")
         price1.innerHTML="Price : "+price+"/-"
-        container.appendChild(item)
         item.appendChild(category1)
         item.appendChild(imageparent)
         item.appendChild(footer)
         footer.appendChild(title1)
         footer.appendChild(price1)
+        container.appendChild(item)
     }
+    loader.remove()
+    document.body.append(container)
 })
