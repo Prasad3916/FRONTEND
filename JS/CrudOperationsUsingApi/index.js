@@ -78,4 +78,3 @@ function deleteItem(id){
         }
     }).catch(err=>console.log(err))
 }
-

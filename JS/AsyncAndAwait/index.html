@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+            border: 1px solid rgb(208, 208, 208) ;
+            margin: 7px;
+            padding: 10px;
+            font-family: cursive;
+        }
+        button{
+            margin-top:10px ;
+            padding: 10px 25px;
+            border: 2px solid darkblue;
+            font-size: 17px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+        }
+        button:hover{
+            transform: scale(0.97);
+        }
+        input{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="id" id="id" disabled>
+        <input type="text" placeholder="title" id="title">
+        <input type="text" placeholder="description" id="description">
+        <input type="reset">
+    </form>
+    <button id="button">Save Or Update</button>
+    <div class="container" id="container"></div>
+    <script src="index.js"></script>
+</body>
+</html>

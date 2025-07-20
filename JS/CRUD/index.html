@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            border: 2px solid rgb(213, 213, 213);
+            margin: 10px;
+            padding: 10px;
+        }
+        .input{
+            margin: 20px;
+            text-align: center;
+        }
+        input{
+            padding: 10px;
+            font-size: 22px;
+        }
+        .add{
+            margin-top: 10px;
+            width: 120px;
+            padding: 15px 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input type="text" placeholder="title" id="title">
+        <input type="text" placeholder="description" id="description">
+        <br>
+        <button class="add" id="add">Add</button>
+    </div>
+    <div class="container" id="container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
