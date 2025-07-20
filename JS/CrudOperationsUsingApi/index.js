@@ -1,4 +1,4 @@
-var url="https://jsonserver-sy6i.onrender.com/user"
+var url="https://jsonserver-sy6i.onrender.com/users"
 // var url="http://localhost:3000/users"
 function addData(){
     var username=document.getElementById("username")
