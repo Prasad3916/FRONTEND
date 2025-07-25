@@ -1,19 +1,31 @@
 var url="https://database-50df4-default-rtdb.firebaseio.com/users.json"
-await fetch(url,{
+var userinput=document.getElementById("username")
+var password=document.getElementById("password")
+var addbutton=document.getElementById("addbutton")
+console.log(userinput)
+console.log(password)
+console.log(addbutton)
+addbutton.addEventListener('click',getData)
+
+async function  getData() {
+    await fetch(url,{
     "method":"POST",
     "headers":{
         "Content-Type":"application/json"
     },
     "body":JSON.stringify({
-        "username":"Ameer@2003",
-        "password":"Ameer@5d5"
+        "username":userinput.value,
+        "password":password.value
+        })
     })
-})
-.then(res=>res.json())
-.then(res=>{
-    // for(var obj in res){
-    //     console.log(res[0])
-    // }
-    console.log(res)
-})
-.catch(err=>console.log(err))
+    .then(res=>{
+        if(res.ok){
+            console.log("Data Posted Successfully")
+            console.log(username.value)
+            console.log(password.value)
+        }
+    })
+    .catch(err=>console.log(err))
+}
+
+
