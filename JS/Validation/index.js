@@ -20,6 +20,7 @@ async function  getData() {
     })
     .then(res=>{
         if(res.ok){
+            alert("Data Posted Successfully")
             console.log("Data Posted Successfully")
             console.log(username.value)
             console.log(password.value)
