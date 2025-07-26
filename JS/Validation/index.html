@@ -11,30 +11,54 @@
             box-sizing: border-box;
         }
         body{
+            width: 100vw;
+            height: 100vh;
             text-align: center;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            align-content: center;
+        }
+        form{
+            margin: 0 auto;
+            width: 30%;
+            border: 3px solid greenyellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form h1{
+            font-size: 20px;
+            color: lightsalmon;
+            margin: 5px;
+        }
+        input{
+            font-size: 18px;
+            outline: none;
         }
         input,button{
+            width: 80%;
             margin: 10px;
             padding: 10px;
+            border: 2.5px solid grey;
+            border-radius: 5px;
+            text-align: center;
         }
-        .item{
-            margin: 0 auto;
-            width: fit-content;
-            padding: 10px;
-            /* border: 2px solid orange; */
-        }
-        .item p{
-            padding: 5px;
+        button{
+            width: 150px;
         }
     </style>
 </head>
 <body>
-    <input type="text" id="username" placeholder="USERNAME"><input type="password" id="password" placeholder="PASSWORD"><br>
-    <button id="addbutton" type="button">Add Data</button>
-    <div class="container" id="container">
+    <form action="ValidationUsers.html" id="form">
+        <!-- <h1>BALA GANAPATHI COMITEE MEMBERS</h1> -->
+         <h1>MOKSHIT PG 504 ROOMATES</h1>
+        <input type="text" id="username" placeholder="USERNAME"><input type="password" id="password" placeholder="PASSWORD" autocomplete="off">
+        <div class="btn">
+            <button id="addbutton" type="button">Register</button>
+            <button id="loginbuuton" type="submit">Login</button>
+        </div>
+    </form>
 
-    </div>
+
     
     <script src="index.js" type="module"></script>
 </body>

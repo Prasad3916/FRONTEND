@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 2%;
+            /* align-content: center; */
+        }
+        button{
+            width: 150px;
+            margin: 10px;
+            padding: 10px;
+            border: 2.5px solid grey;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        button:hover{
+            transform: translate(3px,3px);
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .item{
+            margin: 0 auto;
+            width: fit-content;
+            padding: 10px;
+        }
+        .item p{
+            padding: 5px;
+        }
+        h3{
+            text-align: right;            
+        }
+        a{
+            text-decoration: none;
+            background-color: aqua;
+        }
+        a:hover{
+            color: darkred;
+        }
+        h1{
+            font-size: 20px;
+            color: lightsalmon;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><h3>LOGOUT</h3></a>
+    <h1>ROOMATES LIST</h1>
+    <div class="container" id="container">
+    </div>
+    <script src="ValidationUsers.js"></script>
+</body>
+</html>
