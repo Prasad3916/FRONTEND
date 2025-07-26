@@ -12,16 +12,30 @@
         }
         body{
             text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         input,button{
             margin: 10px;
             padding: 10px;
+        }
+        .item{
+            margin: 0 auto;
+            width: fit-content;
+            padding: 10px;
+            /* border: 2px solid orange; */
+        }
+        .item p{
+            padding: 5px;
         }
     </style>
 </head>
 <body>
     <input type="text" id="username" placeholder="USERNAME"><input type="text" id="password" placeholder="PASSWORD"><br>
     <button id="addbutton" type="button">Add Data</button>
+    <div class="container" id="container">
+
+    </div>
+    
     <script src="index.js" type="module"></script>
 </body>
 </html>
