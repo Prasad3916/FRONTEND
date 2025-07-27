@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=10
+        function fun(){}
+        console.log(this)
+        console.log(window)
+        var obj={
+            "fun2":()=>{console.log(this)},
+            "fun1":function(){console.log(this)}
+        }
+        obj.fun2()
+        obj.fun1()
+        
+
+        obj1={
+            "name":"P Bhavani Prasad",
+            "toString":function(){
+                return "Hello"
+            }
+        }
+
+        obj2={
+            "getName":function(){
+                return `${this.name} is good boy`
+            },
+            "getInfo":function(one,two){
+                return `${this.name} is a ${one} and ${two}`
+            }
+        }
+        console.log(obj2.getName.call(obj1))
+        console.log(obj2.getInfo.call(obj1,"tall","Brilliant"))
+        console.log(obj2.getName.apply(obj1))
+        console.log(obj2.getInfo.apply(obj1,["Cute","Innocent"]))
+        let obj3=obj2.getName.bind(obj1)
+        let obj4=obj2.getInfo.bind(obj1)
+        console.log(obj3())
+        console.log(obj4("Introvert","HardWorker"))
+
+
+        var c=10
+        console.log(c.__proto__)
+        var d={}
+        console.log(d.__proto__)
+        var e=""
+        console.log(e.__proto__)
+        var f=[]
+        console.log(f.__proto__.__proto__.__proto__)
+        
+        
+
+        console.log(obj4.toString())
+        var obj5={
+            __proto__:obj1,
+        }
+        console.log(obj5.__proto__)
+        console.log(obj5.toString())
+
+        Array.prototype.getSum=function () {
+            sum=0
+            for(let ele of this){
+                sum+=ele
+            }
+            return sum
+        }
+
+        Array.prototype.getEven=function () {
+            let arr=[]
+            for(let ele of this){
+                if(ele%2==0){
+                    arr.push(ele)
+                }
+            }
+            return Array.from(new Set(arr))
+        }
+
+        Array.prototype.getOdd=function () {
+            let arr=[]
+            for(let ele of this){
+                if(ele%2!=0){
+                    arr.push(ele)
+                }
+            }
+            return Array.from(new Set(arr))
+        }
+
+        arr=[1,2,5,3,6,3,7,8,1,9,4]
+        
+        console.log(arr.getSum())
+        console.log(arr.getOdd())
+        console.log(arr.getEven())
+
+
+        Object.prototype.toStrings=function(){
+            return "Adding to Strings Method In Object ProtoType"
+        }
+
+        var obj6={}
+        console.log(obj6.toStrings())
+        console.log(this)
+        console.log(this.toStrings)
+
+
+    </script>
+</body>
+</html>

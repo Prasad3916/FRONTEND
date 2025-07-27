@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("name","Bhavani Prasad")
+        localStorage.setItem("address","Vijayawada")
+        var arr=[0,1,2,3,4,5,6,7,8,9]
+        localStorage.setItem("numbers",arr)
+        localStorage.setItem("number",JSON.stringify(arr))
+        localStorage.setItem("numberss",localStorage.getItem("number"))
+        console.log((JSON.parse(localStorage.getItem("numberss"))))
+        console.log(localStorage.getItem("number"))
+        console.log(JSON.parse(localStorage.getItem("number")))
+        console.log(typeof(localStorage.getItem("number")))
+        console.log(localStorage.getItem("numbers"))
+        console.log(typeof(localStorage.getItem("numbers")))
+        console.log(localStorage.getItem("name"))
+        console.log(localStorage.getItem("address"))
+    </script>
+</body>
+</html>

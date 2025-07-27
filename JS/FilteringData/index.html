@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+            gap: 10px;
+        }
+        .container>div{
+            border: 1px solid;
+            border-radius: 6px;
+            padding: 10px;
+        }
+        .container>div>img{
+            margin: 0 auto;
+            display: block;
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+        .container>div>p{
+            margin-bottom: 0;
+        }
+        .btncontainer{
+            text-align: center;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            width: fit-content;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        p{
+            height: 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="btncontainer"></div>
+    <div class="container">
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

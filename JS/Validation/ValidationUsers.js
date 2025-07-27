@@ -16,7 +16,7 @@ async function displayData() {
             // p2.textContent=res[key]["password"]
             deletebtn.textContent="Delete"
             item.append(p1,deletebtn);
-            deletebtn.addEventListener("click",()=>deleteData(key))
+            // deletebtn.addEventListener("click",()=>deleteData(key))
             divcontainer.appendChild(item)
             console.log(res[key]["username"],res[key]["password"])
         }
@@ -24,14 +24,14 @@ async function displayData() {
 }
 displayData()
 
-async function deleteData(key){
-var delurl=`https://database-50df4-default-rtdb.firebaseio.com/users/${key}.json`
-await fetch(delurl,{"method":"DELETE"})
-.then(res=>{
-    if(res.ok){
-        displayData()
-        alert("DELETED SUCCESSFULLY")
-        console.log("DELETED SUCCESSFULLY")
-    }
-})
-}
+// async function deleteData(key){
+// var delurl=`https://database-50df4-default-rtdb.firebaseio.com/users/${key}.json`
+// await fetch(delurl,{"method":"DELETE"})
+// .then(res=>{
+//     if(res.ok){
+//         displayData()
+//         alert("DELETED SUCCESSFULLY")
+//         console.log("DELETED SUCCESSFULLY")
+//     }
+// })
+// }
