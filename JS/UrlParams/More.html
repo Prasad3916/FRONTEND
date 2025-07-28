@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+    }
+    .item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+    }
+    .item img {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+    .item p {
+      padding: 4px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+    .btn {
+      padding: 10px;
+      margin: 20px auto 0;
+      display: block;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="detailsContainer"></div>
+  <button class="btn" onclick="window.location.href='index.html'">⬅️ Back to Products</button>
+  <script>
+    const container = document.getElementById("detailsContainer");
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    const data = JSON.parse(localStorage.getItem("products")) || [];
+
+    const res = data.filter((item) => item.id == id);
+
+    function displayDetails(products) {
+      products.forEach((prd) => {
+        const { brand, category, description, images, price, stock, title } = prd;
+        const item = document.createElement("div");
+        item.className = "item";
+        item.innerHTML = `
+          <img src="${images[0]}" alt="${title}" onerror="this.src='fallback.jpg'">
+          <p><strong>Title:</strong> ${title}</p>
+          <p><strong>Price:</strong> $${price}</p>
+          <p><strong>Stock:</strong> ${stock}</p>
+          <p><strong>Brand:</strong> ${brand || "N/A"}</p>
+          <p><strong>Category:</strong> ${category}</p>
+          <p><strong>Description:</strong> ${description}</p>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    displayDetails(res);
+  </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Details</title>
+
+</head>
+<body>
+
+
+
+</body>
+</html> -->

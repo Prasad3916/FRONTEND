@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn-open">Open Window</button>
+    <button id="btn-close">Close Window</button>
+    <button id="btn-alert">Get ALert</button>
+    <button id="btn-confiramtion">Get Confirmation</button>
+    <button id="btn-prompt">Get Prompt</button>
+    <button id="btn-start">Start Timer</button>
+    <button id="btn-stop">Stop Timer</button>
+    <div class="output"></div>
+    <script>
+        let btnopen=document.getElementById("btn-open")
+        let btnclose=document.getElementById("btn-close")
+        let btnalert=document.getElementById("btn-alert")
+        let btnconfirmation=document.getElementById("btn-confiramtion")
+        let btnprompt=document.getElementById("btn-prompt")
+        let btnstart=document.getElementById("btn-start")
+        let btnstop=document.getElementById("btn-stop")
+        let output=document.getElementsByClassName("output")[0]
+        let newwindow=null
+        function btnOpen(){
+            newwindow=open("https://www.w3schools.com/css/css_text_spacing.asp","_blank","width=500,height=300,top=300,left=500")
+            // newwindow=setTimeout(()=>{
+                    // newwindow.close()
+            //     alert("Danger.........")
+            // },2000)
+        }
+        btnopen.onclick=btnOpen
+        function btnClose(){
+            newwindow.close()
+            // clearInterval(newwindow)
+        }
+        btnclose.onclick=btnClose
+        function btnAlert(){
+            alert("Some Thing Went Wrong")
+        }
+        btnalert.onclick=btnAlert
+        let confirmation=null+
+        63
+        function btnConfirmation(){
+            let confirmation=window.confirm("Do You Want To Close The Window ?")
+            if(confirmation){
+                newwindow.close()
+            }
+        }
+        btnconfirmation.onclick=btnConfirmation
+        function btnPrompt(){
+            let value=+prompt("Enter a Value",999)
+            console.log(value)
+        }
+        btnprompt.onclick=btnPrompt
+        function btnStart(){
+            let datetime=new Date()
+            output.innerHTML=`<h1>${datetime.getHours()} : ${datetime.getMinutes()} : ${datetime.getSeconds()}</h1>`
+        }
+        let timer=null
+        btnstart.onclick=()=>{
+            timer=setInterval(()=>{
+                btnStart()
+            },1000)
+        }
+        function btnStop(){
+            output.innerHTML=``
+            clearInterval(timer)
+        }
+        btnstop.onclick=btnStop
+        // let timer1=null
+        // btnstart.addEventListener("click",function (){
+        //     let count=0
+        //     timer1=setInterval(()=>{
+        //         output.innerHTML=`${++count}`
+        //     },1000)
+        // })
+        // btnstop.addEventListener("click",()=>{
+        //     output.innerHTML=``
+        //     clearInterval(timer1)
+        // })
+    </script>
+</body>
+</html>
