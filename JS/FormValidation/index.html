@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            align-content: center;
+            background-color: #d6c0c0;
+        }
+        .container{
+            margin: 0 auto;
+            border: 1px solid white;
+            border-radius: 3px;
+            width: 40%;
+            padding: 1%;
+            border: 1px solid #eee;
+        }
+        input,label,span{
+            display: block;
+            width: 75%;
+            margin: 1.2% auto;
+            padding: 1.5%;
+            font-size: 18px;
+            text-align: center;
+            outline: none;
+            border-radius: 6px;
+            border: none;
+        }
+        label,span{
+            text-align: start;
+            padding: 0;
+            color: darkblue;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+        input[type="submit"]{
+            width: 25%;
+        }
+        .success{
+            border: 2px solid greenyellow;
+            color: darkblue ;
+        }
+        .invalid{
+            font-size: 14px;
+            font-family: sans-serif;
+            border: 2px solid red;
+            color: red;
+        }
+        span.invalid{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="modulesUsage.html" autocomplete="off">
+            <label for="username">UserName</label>
+            <input type="text" placeholder="Enter UserName" id="username" autofocus="on">
+            <span id="userspan"></span>
+            <label for="password">Password</label>
+            <input type="text" placeholder="Password" id="password">
+            <span id="pwdspan"></span>
+            <label for="cpassword">ConfirmPassword</label>
+            <input type="text" placeholder="ConfirmPassword" id="cpassword">
+            <span id="cpwdspan"></span>
+            <label for="preferredlanguage">PreferredLanguage</label>
+            <input type="text" list="state" id="preferredlanguage" placeholder="Preferred Language">
+            <span id="plgspan"></span>
+            <datalist id="state">
+                <option value="Telugu"></option>
+                <option value="Hindi"></option>
+                <option value="English"></option>
+            </datalist>
+            <input type="submit">
+        </form>
+    </div>
+    <script src="validation.js" type="module"></script>
+</body>
+</html>
