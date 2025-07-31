@@ -1,4 +1,4 @@
-import validationModule from './modules.js'
+import validationModule from './Modules.js'
 let username=document.getElementById("username");
 let password=document.getElementById("password");
 let cpassword=document.getElementById("cpassword")
