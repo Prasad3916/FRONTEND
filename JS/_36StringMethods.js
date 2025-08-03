@@ -1,0 +1,42 @@
+let str="Hello World";
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.toLocaleLowerCase());
+console.log(str.toLocaleUpperCase());
+console.log(str.charAt(0));
+console.log(str.charAt(-1));
+console.log(str.at(-1));
+console.log(str.at(2));
+console.log(str.replace(' ','-'));
+console.log(str.repeat(3));
+console.log(str.split(''));
+console.log(str.split(' '));
+console.log(str.padEnd(20,'-'));
+console.log(str.padStart(20,'-'));
+console.log(str.substring(0));
+console.log(str.substring(0,7));
+console.log(str.charCodeAt(7));
+console.log(str.codePointAt(7));
+console.log(str.indexOf(' '));
+console.log(str.indexOf('W'));
+console.log(str.indexOf('x'));
+console.log(str.slice(1,-5));
+console.log(str.substring(-7,5)); // considers negative zero
+console.log(str.substr(0,15));
+console.log(str.substr(0,6));
+console.log(str.startsWith('H'));
+console.log(str.startsWith('h'));
+console.log(str.endsWith('d'));
+console.log(str.endsWith('D'));
+console.log(str.includes('d'));
+console.log(str.includes('z'));
+console.log(str.lastIndexOf('o'));
+console.log(str.indexOf('o',5)); // return second o index 
+let s="       Hello        ";
+console.log(s.trimStart());
+console.log(s.trimEnd());
+console.log(s.trim());
+console.log(str.length);
+console.log(s.length);
+console.log(str.substring(0,5).concat(" Prasad"));
+
