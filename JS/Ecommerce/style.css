@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: robo1;
+    src: url("./static/Roboto_SemiCondensed-Regular.ttf");
+}
+@font-face {
+    font-family: robo2;
+    src: url("./Roboto-Italic-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+    font-family: robo3;
+    src: url("./Pacifico-Regular.ttf");
+}
+.mainheader{
+    background-image: url("https://a.storyblok.com/f/165154/1280x720/128bef3138/01_trending-ecommerce-products-header.jpg/m/");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.menu{
+    display: block;
+}
+.shippify{
+    background-color: rgba(90, 90, 90, 0.3);
+}
+.header-content{
+    display: grid;
+    padding: 1%;
+    grid-template-columns: repeat(3,1fr);
+    color: rgb(199, 193, 193);
+    font-size: 24px;
+    align-items: center;
+    box-shadow: 0px 10px 50px inset  black;
+}
+.navitems{
+    display: block;
+    /* width: 0px; */
+    height: 0px;
+    overflow: hidden;
+    white-space:nowrap;
+}
+.logo{
+    flex-grow : 1;
+}
+.logo>img{
+    height: 100%;
+    object-fit: contain;
+}
+.ename{
+    text-align: center;
+    padding: 1%;
+    font-family: robo1;
+    font-size: 28px;
+    color: rgba(0, 27, 21, 0.7);
+    flex-grow: 1;
+}
+.nav{
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+}
+.nav li{
+    list-style: none;
+    cursor: pointer;
+    transition: all 1s;
+}
+.header-content > .nav {
+  justify-self: end;
+}
+.nav li:hover{
+    transform: translate(-3%);
+    color: white;
+}
+.navitems li:hover{
+    transform: translate(-3%);
+    color: white;
+}
+.section{
+    font-size: 53px;
+    letter-spacing: 5px;
+    font-family:robo2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-40deg);
+    background-color: rgba(253, 253, 253, 0.3);
+    padding: 1% 5%;
+    color: rgba(0, 0, 0, 0.7);
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); 
+    gap: 10px;
+    padding: 1%;
+}
+.container >div{
+    padding: 2%;
+    /* border: 1px solid; */
+    border-radius: 3px;
+    box-shadow: 0 0 1px 2px inset rgb(0, 194, 55);
+}
+.container > div > img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    margin: 2% auto;
+    display: block;
+}
+.container > div > .title{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: robo2;
+    /* text-align: center; */
+    color: darkblue;
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.container > div > .pricetag{
+    font-size: 18px;
+    font-weight: 200;
+    font-family: robo3;
+    text-align: center;
+}
+ .container > div > .total{
+    text-align: end;
+    font-family: robo1;
+    font-weight: bold;
+}
+.container > div > .total strike{
+    color: red;
+}
+.container > div > .total b{
+    color: rgb(36, 197, 0);
+}
+.container > div  .addbtn{
+    padding: 2%;
+    color: darkblue;
+    background-color: blanchedalmond;
+    margin: 2%;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.container > div  .addbtn:hover{
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:700px){
+     .menuicon{
+        display: none;
+     }
+}
+@media screen and (max-width:700px){
+     .ename,.nav{
+        display: none !important;
+     }
+     .navitems.visible{
+        text-align: center;
+        height:fit-content;
+        width: 100%;
+        transition: 3s;
+        display: block;
+        padding: 2%;
+        background-color: rgba(42, 46, 46, 0.3);
+        color: white;
+        font-family: robo3;
+
+     }
+     .navitems li{
+        list-style: none;
+     }
+    .header-content{
+        padding: 2%;
+        display: flex;
+        justify-content: space-between;
+     }
+     .menuicon{
+        color: white;
+        font-size: 28px;
+     }
+}
+

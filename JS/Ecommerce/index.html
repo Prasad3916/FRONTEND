@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shippify</title>
+    <link rel="icon" href="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/vpxhwypignvc4b6btwq4" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="mainheader">
+        <header class="shippify">
+            <div class="header-content">
+                <div class="logo"><img src="https://cdn.prod.website-files.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg" alt=""></div>
+                <h2 class="ename">Shippify</h2>
+                <div class="nav">
+                    <li>Home</li>
+                    <li data-bs-target="#firstmodal" data-bs-toggle="modal">Login</li>
+                    <li>SignIn</li>
+                    <li>ContactUs</li>
+                </div>
+                <i class="bi bi-list menuicon"></i>
+            </div>
+        </header>
+        <div class="navitems">
+            <li>Home</li>
+            <li data-bs-target="#firstmodal" data-bs-toggle="modal">Login</li>
+            <li>SignIn</li>
+            <li>ContactUs</li>
+        </div>
+        <section class="section">
+            <h1>SHIppiFy</h1>
+        </section>
+    </div>
+    <div class="container">
+    </div>
+
+    <!-- <button class="btn btn-outline-success" data-bs-target="#firstmodal" data-bs-toggle="modal">Login</button> -->
+    <div class="modal fade " id="firstmodal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2><span class="bi bi-person"></span>Login</h2>
+                    <button class="btn btn-primary btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt><label for="username">USERNAME</label></dt>
+                        <dd><input type="text" id="username" class="form-control" placeholder="UserName"></dd>
+                        <dt><label for="password">PASSWORD</label></dt>
+                        <dd><input type="text" id="password" class="form-control" placeholder="PassWord"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" data-bs-target="#secondmodal" data-bs-toggle="modal" id="login">LogIn</button>
+                    <button class="btn btn-danger">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
