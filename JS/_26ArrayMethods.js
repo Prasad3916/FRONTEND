@@ -1,7 +1,7 @@
 // arr=[1,2,3,4,5,6,7,8,9]
 // console.log(arr.push(4)) // add element and returns new length
 // console.log(arr)
-// console.log(arr.unshift(0)) // add element and returns new length
+// console.log(arr.unshift(0)) // add element at first and returns new length
 // console.log(arr)
 // console.log(arr.shift())  // returns first element in array and removes first element
 // console.log(arr)

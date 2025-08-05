@@ -125,71 +125,83 @@ let menuicon=document.getElementsByClassName("menuicon")[0];
 let nav=document.getElementsByClassName("navitems")[0];
 let username=document.getElementById("username");
 let password=document.getElementById("password");
-let login=document.getElementById("login")
-// console.log(login)
-// console.log(username)
-// console.log(password)
-menuicon.addEventListener("click",()=>
-{
-    nav.classList.toggle("visible")
-    // console.log(nav)
+let susername=document.getElementById("susername");
+let spassword=document.getElementById("spassword");
+let fusername=document.getElementById("fusername");
+let fpassword=document.getElementById("fpassword");
+let login=document.getElementById("login");
+let signup=document.getElementById("signup");
+let fpbtn=document.getElementById("fpbtn");
+menuicon.addEventListener("click",()=>{
+    nav.classList.toggle("visible");
 });
+signup.addEventListener("click",async ()=>{
+    await signUpUser();
+    susername.value="";
+    spassword.value="";
+})
 async function getData(){
-    let resonse=await fetch("https://dummyjson.com/carts")
-    let result=await resonse.json()
-    // console.log(result)
-    // console.log(container)
+    let response=await fetch("https://dummyjson.com/carts")
+    let result=await response.json()
+    let products=[];
     for(let cart of result.carts){
-        // console.log(cart.products[0])
         let item=document.createElement("div")
         let {title,price,thumbnail,quantity,discountPercentage,discountedTotal,total}=cart.products[0];
+        products.push(...cart.products)
+        // console.log(cart.products)
         item.innerHTML=`<img src=${thumbnail} alt="Loading">
         <p class="title">${title}</p><p class="pricetag">Price : ${price}Rs Quantity : ${quantity}</p>
         <p class="total">Total : <strike>${total.toFixed(2)}/-</strike> ${discountedTotal}/-  <b>${discountPercentage}%<b> discount</p>
-        <button class="addbtn">Add to Cart </button>`
+        <button class="addbtn" data-bs-target="#firstmodal" data-bs-toggle="modal">Add to Cart </button>`
         container.appendChild(item)
-        // console.log(title,price,thumbnail,quantity,discountPercentage)
     }
+    localStorage.setItem("products",JSON.stringify(products))
 }
+console.log(JSON.parse(localStorage.getItem("products")))
 getData()
-
-
-async function  displayData() {
-    let resonse=await fetch("https://ecommerce-cd13e-default-rtdb.firebaseio.com/users.json")
-    let result=await resonse.json();
-    // for(let user in result){
-    //     let finduser=result[user]
-    //     console.log(finduser.username)
-    //     console.log(finduser.password) 
-    // }
-    return result;
-}
-
 login.addEventListener("click",async ()=>{
-    let result = await displayData();
+    let response=await fetch("https://ecommerce-cd13e-default-rtdb.firebaseio.com/users.json")
+    let result=await response.json();
     for(let user in result){
         let finduser=result[user]
         if(username.value==finduser.username && password.value==finduser.password){
-            // console.log(finduser.username);
-            // console.log(finduser.password);
-            window.location.href="./login.html"
+            navigateLoginPage(user)
         }
     }
 })
-// displayData()
+function navigateLoginPage(id){
+    window.location.href=`./Login.html?id=${id}`
+}
 
-// function initNavToggle() {
-//   const menuIcon = document.querySelector('.menuicon');
-//   const navItems = document.querySelector('.navitems');
+async function  signUpUser() {
+    let options={
+        "method":"POST",
+        "headers":{
+            "Content-Type":"application/json"
+        },
+        "body":JSON.stringify({
+            "username":susername.value,
+            "password":spassword.value,
+            "products":JSON.parse((localStorage.getItem("products")))
+        })
+    }
+    let response=await fetch("https://ecommerce-cd13e-default-rtdb.firebaseio.com/users.json",options);
+    console.log(response.status,response.statusText)
+}
 
-//   function toggleNav() {
-//     navItems.classList.toggle('active');
-//     navItems.setAttribute('aria-hidden', !navItems.classList.contains('active'));
-//   }
 
-//   menuIcon.addEventListener('click', toggleNav);
-//   menuIcon.addEventListener('keypress', (e) => {
-//     if (e.key === 'Enter') toggleNav();
-//   });
-// }
-// initNavToggle();
+fusername.addEventListener("keypress",async ()=>{
+    let response=await fetch("https://ecommerce-cd13e-default-rtdb.firebaseio.com/users.json");
+    let result=await response.json();
+    for(let user in result){
+        let finduser=result[user];
+        if(finduser.username==fusername.value){
+            fpassword.focus();
+            fpbtn.addEventListener("click",()=>{
+                console.log(fpassword.value)
+            });
+        }
+    }
+})
+
+

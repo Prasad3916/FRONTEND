@@ -1,0 +1,52 @@
+<!-- <input type="file" id="imageInput" />
+<button id="uploadBtn">Upload</button>
+<img id="preview" style="max-width: 300px;" />
+
+<script type="module">
+  import { Client, Storage, ID } from "https://cdn.jsdelivr.net/npm/appwrite@13.0.0/+esm";
+
+  const client = new Client()
+    .setEndpoint("https://fra.cloud.appwrite.io/v1") // e.g. https://cloud.appwrite.io/v1
+    .setProject("689105ab000cf86e01aa");
+
+  const storage = new Storage(client);
+
+  const imageInput = document.getElementById("imageInput");
+  const uploadBtn = document.getElementById("uploadBtn");
+  const preview = document.getElementById("preview");
+
+  uploadBtn.addEventListener("click", async () => {
+    const file = imageInput.files[0];
+    if (!file) return alert("Please select an image.");
+
+    try {
+      const response = await storage.createFile(
+        "YOUR_BUCKET_ID", // Create a bucket in Appwrite Console
+        ID.unique(),
+        file
+      );
+
+      const fileId = response.$id;
+      const imageUrl = client.endpoint + "/storage/buckets/YOUR_BUCKET_ID/files/" + fileId + "/view?project=YOUR_PROJECT_ID";
+
+      preview.src = imageUrl;
+      alert("✅ Image uploaded!");
+      console.log("Image URL:", imageUrl);
+    } catch (err) {
+      console.error("Upload failed:", err);
+      alert("❌ Upload error");
+    }
+  });
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
