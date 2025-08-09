@@ -18,7 +18,7 @@
 
 
 
-
+let item=null;
         async function displayData(){
             container.innerHTML=``;
             let response=await fetch(urlbyid);
@@ -30,7 +30,8 @@
             }
             else{
                 for(let cart of result.products){
-                    let item=document.createElement("div");
+                    item=document.createElement("div");
+                    item.classList="item"
                     let div=document.createElement("div");
                     div.className="itembtn";
                     let addtocart=document.createElement("button");
@@ -58,7 +59,27 @@
                         <p class="total">Total : <strike>${total.toFixed(2)}/-</strike> ${discountedTotal}/-  <b>${discountPercentage}%</b> discount</p>
                         `
                         viewcarts.appendChild(addcartitem)
+                        window.scroll({
+                            top: 0,
+                            behavior: "smooth"
+                        });
                     })
+                }
+                const handleIntersector=(entries)=>{
+                    for(let entry of entries){
+                        if(entry.isIntersecting){
+                            entry.target.classList.add("revealed");
+                        }
+                        else{
+                            entry.target.classList.remove("revealed");
+                        }
+                    }    
+                }
+                let items=document.querySelectorAll(".item");
+                const observer=new IntersectionObserver(handleIntersector)
+                for(let item of items ){
+                    console.log(item)
+                    observer.observe(item);
                 }
             }
         }

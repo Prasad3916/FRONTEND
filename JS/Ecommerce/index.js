@@ -132,23 +132,38 @@ let fpassword=document.getElementById("fpassword");
 let login=document.getElementById("login");
 let signup=document.getElementById("signup");
 let fpbtn=document.getElementById("fpbtn");
+let invalidbtn=document.getElementById("invalidbtn");
+let credentialsmenu=document.getElementById("credentialsmenu");
 menuicon.addEventListener("click",()=>{
     nav.classList.toggle("visible");
 });
 signup.addEventListener("click",async ()=>{
-    await signUpUser();
-    susername.value="";
-    spassword.value="";
+    if(susername.value=="" || spassword.value==""){
+        invalidbtn.setAttribute("data-bs-target","#invalidcredientials");
+        invalidbtn.setAttribute("data-bs-toggle","modal");
+        invalidbtn.click();
+    }
+    else{
+        await signUpUser();
+        credentialsmenu.innerHTML=`Sign Up Successfully`
+        credentialsmenu.setAttribute("data-bs-target","#credentialsmenu");
+        credentialsmenu.setAttribute("data-bs-toggle","modal");
+        credentialsmenu.click();
+        susername.value="";
+        spassword.value="";
+    }
 })
+let item=null;
 async function getData(){
     let response=await fetch("https://dummyjson.com/carts")
     let result=await response.json()
     let products=[];
     for(let cart of result.carts){
-        let item=document.createElement("div")
+         item=document.createElement("div")
         let {title,price,thumbnail,quantity,discountPercentage,discountedTotal,total}=cart.products[0];
         products.push(...cart.products)
         // console.log(cart.products)
+        item.classList="item"
         item.innerHTML=`<img src=${thumbnail} alt="Loading">
         <p class="title">${title}</p><p class="pricetag">Price : ${price}Rs Quantity : ${quantity}</p>
         <p class="total">Total : <strike>${total.toFixed(2)}/-</strike> ${discountedTotal}/-  <b>${discountPercentage}%<b> discount</p>
@@ -156,6 +171,25 @@ async function getData(){
         container.appendChild(item)
     }
     localStorage.setItem("products",JSON.stringify(products))
+    // const observer=new IntersectionObserver();
+    const handleIntersector=(entries)=>{
+        for(let entry of entries){
+            if(entry.isIntersecting){
+                entry.target.classList.add("revealed");
+            }
+            else{
+                entry.target.classList.remove("revealed");
+            }
+        }    
+    }
+    let items=document.querySelectorAll(".item");
+    const observer=new IntersectionObserver(handleIntersector)
+
+    for(let item of items ){
+        // console.log(item)
+        observer.observe(item);
+    }
+
 }
 console.log(JSON.parse(localStorage.getItem("products")))
 getData()
@@ -166,6 +200,12 @@ login.addEventListener("click",async ()=>{
         let finduser=result[user]
         if(username.value==finduser.username && password.value==finduser.password){
             navigateLoginPage(user)
+        }
+        else{
+            credentialscontent.innerHTML=`Invalid Credentials`
+            credentialsmenu.setAttribute("data-bs-target","#credentialsmenu");
+            credentialsmenu.setAttribute("data-bs-toggle","modal");
+            credentialsmenu.click();
         }
     }
 })
@@ -203,5 +243,7 @@ fusername.addEventListener("keypress",async ()=>{
         }
     }
 })
+
+
 
 

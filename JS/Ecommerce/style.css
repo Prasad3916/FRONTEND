@@ -111,6 +111,13 @@
     /* border: 1px solid; */
     border-radius: 3px;
     box-shadow: 0 0 1px 2px inset rgb(0, 194, 55);
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+    transition: all 0.4s;
+}
+.container >div.revealed{
+    opacity: 1;
+    transform:  translate(0px) scale(1);
 }
 .container > div > img{
     width: 250px;
