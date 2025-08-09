@@ -199,7 +199,10 @@ login.addEventListener("click",async ()=>{
     for(let user in result){
         let finduser=result[user]
         if(username.value==finduser.username && password.value==finduser.password){
-            navigateLoginPage(user)
+            await navigateLoginPage(user);
+            username.value="";
+            password.value="";
+            return;
         }
         else{
             credentialscontent.innerHTML=`Invalid Credentials`
@@ -209,7 +212,7 @@ login.addEventListener("click",async ()=>{
         }
     }
 })
-function navigateLoginPage(id){
+async function navigateLoginPage(id){
     window.location.href=`./Login.html?id=${id}`
 }
 
